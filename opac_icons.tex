@@ -1,0 +1,261 @@
+\documentclass[a4paper,10pt]{amsart}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Format icons in Evergreen}
+\author{Linn Libraries Consortium}
+\date{\today}
+\renewcommand{\labelitemi}{$\triangleright$}
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+
+\begin{document}
+\begin{abstract}
+Evergreen looks at certain fixed fields in a MARC record to determine which format icon displays for a particular title.  This document lists the fields and values that cause certain icons to be displayed.  This document will assist catalogers in troubleshooting records that are displaying incorrect format icons.
+\end{abstract}
+
+
+\maketitle
+
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\newpage
+
+
+\section{Audio materials}
+\subsection{Cassette audiobook}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf i} (talking books).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must be {\bf l} (lowercase letter ell, representing 1$\frac{7}{8}$ips).
+\end{itemize}
+
+\subsection{Cassette music}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf j} (music).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must be {\bf l} (lowercase letter ell, representing 1$\frac{7}{8}$ips).
+\end{itemize}
+
+
+\subsection{CD audiobook}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf i} (talking books).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must be {\bf f} (1.4 m/s).
+\end{itemize}
+
+\subsection{CD music}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf j} (music).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must be {\bf f} (1.4 m/s).
+\end{itemize}
+
+
+\subsection{E-audio}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf i} (talking books).
+ \item Form fixed field (character 23 of LDR) must be {\bf o}, {\bf q}, or {\bf s} (all three referring to electronic materials).
+\end{itemize}
+
+
+\subsection{Music: unknown format}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf j} (music).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must not be {\bf a, b, c, d, f, e,} or {\bf l}.
+\end{itemize}
+
+
+\subsection{Phonograph music}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf j} (music).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must not be {\bf a, b, c, d,} or {\bf e}.
+\end{itemize}
+
+\subsection{Phonograph spoken recording}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf i} (talking books).
+\end{itemize}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf s} (sound recording).
+ \item Character 4 (speed) must not be {\bf a, b, c, d,} or {\bf e}.
+\end{itemize}
+
+
+
+
+\section{Electronic materials}
+\subsection{E-audio}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf i} (talking books).
+ \item Form fixed field (character 23 of LDR) must be {\bf o}, {\bf q}, or {\bf s} (all three referring to electronic materials).
+\end{itemize}
+
+\subsection{E-book}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf a} (books) or {\bf t} (manuscripts).
+ \item BLvl fixed field (character 7 of LDR) must not be {\bf b} or {\bf s} (both serials).
+ \item Form fixed field (character 23 of LDR) must be {\bf o}, {\bf q}, or {\bf s} (all three referring to electronic materials).
+\end{itemize}
+
+
+\subsection{E-video}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf g} (videos).
+ \item Form fixed field (character 23 of LDR) must be {\bf o}, {\bf q}, or {\bf s} (all three referring to electronic materials).
+\end{itemize}
+
+\subsection{Software and video games}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf m} (games and software).
+\end{itemize}
+
+
+
+
+\section{Microforms}
+\subsection{Microform}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Form fixed field (character 23 of LDR) must be {\bf a}, {\bf b}, or {\bf c} (all three referring to microform materials).
+\end{itemize}
+
+
+
+\section{Objects}
+\subsection{Equipment, games, toys}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf r} (equipment, objects, things).
+\end{itemize}
+
+\subsection{Kits}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf o} (kit) or {\bf p} (mixed materials).
+\end{itemize}
+
+\subsection{Picture}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf k} (images/art).
+\end{itemize}
+
+
+
+\section{Paper materials}
+\subsection{Book}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf a} (books) or {\bf t} (manuscripts).
+ \item BLvl fixed field (character 7 of LDR) must not be {\bf b} or {\bf s} (both serials).
+ \item Form fixed field (character 23 of 008) must be empty.
+\end{itemize}
+
+\subsection{Braille materials}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf a} (books) or {\bf t} (manuscripts).
+ \item Form fixed field (character 23 of 008) must be {\bf f} (Braille).
+\end{itemize}
+
+\subsection{Large print book}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf a} (books) or {\bf t} (manuscripts).
+ \item BLvl fixed field (character 7 of LDR) must be {\bf a, c, d,} or {\bf m}.
+ \item Form fixed field (character 23 of 008) must be {\bf d} (large print).
+\end{itemize}
+
+\subsection{Map}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf e} (atlas) or {\bf f} (map).
+\end{itemize}
+
+\subsection{Music score}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf c} or {\bf d.}
+\end{itemize}
+
+\subsection{Serials and magazines}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf b} or {\bf s.}
+\end{itemize}
+
+
+
+\section{Video materials}
+
+\subsection{Blu-ray}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf v} (videorecording).
+ \item Character 4 (format) must be {\bf s} (Blu-ray).
+\end{itemize}
+
+
+\subsection{DVD}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf v} (videorecording).
+ \item Character 4 (format) must be {\bf v} (DVD).
+\end{itemize}
+
+\subsection{E-video}
+\subsubsection*{Fixed fields}
+\begin{itemize}
+ \item Type fixed field (character 6 of LDR) must be {\bf g} (videos).
+ \item Form fixed field (character 23 of LDR) must be {\bf o}, {\bf q}, or {\bf s} (all three referring to electronic materials).
+\end{itemize}
+
+
+\subsection{VHS}
+\subsubsection*{Field 007}
+\begin{itemize}
+ \item Character 0 (category) must be {\bf v} (videorecording).
+ \item Character 4 (format) must be {\bf b} (VHS).
+\end{itemize}
+
+
+
+
+\end{document}
